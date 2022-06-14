@@ -1,13 +1,36 @@
-function add(n1, n2, showResult, result) {
-    if (showResult) {
-        console.log(result + (n1 + n2));
-    }
-    else {
-        return n1 + n2;
-    }
+// Types in objects and arrays
+// const person: {
+//     name: string,
+//     age: number,
+//     hobbies: string[],
+//     role: [number, string]
+// } = {
+//   name: "Maximilian",
+//   age: 30,
+//   hobbies: ["Sports", "Cooking"],
+//   role: [2, "Author"]
+// };
+// Enum --- Assignes labels represented by numbers
+var Role;
+(function (Role) {
+    Role[Role["ADMIN"] = 0] = "ADMIN";
+    Role[Role["READ_ONLY"] = 1] = "READ_ONLY";
+    Role[Role["AUTHOR"] = 2] = "AUTHOR";
+})(Role || (Role = {}));
+var person = {
+    name: "Maximilian",
+    age: 30,
+    hobbies: ["Sports", "Cooking"],
+    role: Role.ADMIN
+};
+var favoriteActivities;
+favoriteActivities = ["Sports", "Reading"];
+console.log(person.name);
+for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
+    var hobby = _a[_i];
+    console.log(hobby.toLocaleUpperCase);
 }
-var number1 = 55;
-var number2 = 2.8;
-var printResult = true;
-var result = "Result is : ";
-add(number1, number2, printResult, result);
+;
+if (person.role === Role.READ_ONLY) {
+    console.log("YES");
+}

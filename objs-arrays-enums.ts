@@ -14,16 +14,16 @@
 // Enum --- Assignes labels represented by numbers
 
 enum Role {
-  ADMIN = 5,
+  ADMIN,
   READ_ONLY,
-  AUTHOR,
+  AUTHOR
 }
 
 const person = {
   name: "Maximilian",
   age: 30,
   hobbies: ["Sports", "Cooking"],
-  role: Role.ADMIN,
+  role: Role.ADMIN
 };
 
 let favoriteActivities: string[];
